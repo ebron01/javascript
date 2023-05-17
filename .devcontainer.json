@@ -1,0 +1,6 @@
+{
+    "image":"javascript",
+    // "image":"suru",
+    "runArgs": ["--add-host=host.docker.internal:172.26.176.1","--net=host","--shm-size=8gb","--gpus=all"]
+    // "runArgs": ["--add-host=host.docker.internal:172.19.176.1","--net=host"]
+}
