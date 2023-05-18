@@ -1,0 +1,61 @@
+* {
+  background-color: black;
+  color: white;
+}
+
+.box {
+  height: 40px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  font-size: 40px;
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+}
+
+.entry {
+  margin: 10px;
+  width: 120px;
+  height: 40px;
+  border: 1px solid white;
+}
+
+h1 {
+  text-align: center;
+}
+.btn {
+  margin: 10px;
+  background-color: white;
+  color: black;
+}
+.again {
+}
+.check {
+}
+.guess {
+}
+.left {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+.right {
+  width: 50%;
+  float: left;
+}
+/* .row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+.line {
+  float: absolute;
+}
+
+.l {
+  text-align: left;
+}
+.r {
+  text-align: right;
+}
