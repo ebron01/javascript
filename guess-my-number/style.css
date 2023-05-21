@@ -1,13 +1,13 @@
-* {
+body {
   background-color: black;
   color: white;
 }
 
 .box {
-  height: 40px;
+  height: 60px;
   text-align: center;
-  padding: 10px;
-  margin: 10px;
+  padding: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
   font-size: 40px;
   border: 1px solid white;
   background-color: white;
