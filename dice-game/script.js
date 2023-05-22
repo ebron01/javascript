@@ -84,12 +84,13 @@ const reset = function () {
   currentScore0.textContent = 0;
   currentScore1.textContent = 0;
   diceEl.classList.add("hidden");
-  console.log(activePlayer);
-  console.log(
-    document.querySelector(".player--1").hasAttribute("player--active"),
-    document.querySelector(".player--1").classList
-  );
-  if (document.querySelector(".player--1").hasAttribute("player--active")) {
+  // console.log(
+  //   document.querySelector(".player--0").classList,
+  //   document.querySelector(".player--1").classList
+  // );
+  if (
+    document.querySelector(".player--1").classList.contains("player--active")
+  ) {
     document.querySelector(".player--1").classList.remove("player--active");
     document.querySelector(".player--0").classList.add("player--active");
   }
