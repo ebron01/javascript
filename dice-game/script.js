@@ -79,7 +79,7 @@ const reset = function () {
   player0El.classList.add("player--active");
   player1El.classList.remove("player--active");
 
-  for (i = 0; i < 2; i++) {
+  for (let i = 0; i < 2; i++) {
     document.querySelector(`.player--${i}`).classList.remove("player--winner");
     document.querySelector(`.player--${i}`).classList.remove(".name");
   }
