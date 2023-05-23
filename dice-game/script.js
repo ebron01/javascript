@@ -11,13 +11,27 @@ const player0El = document.querySelector(".player--0");
 const player1El = document.querySelector(".player--1");
 let currentScore0 = document.getElementById("current--0");
 let currentScore1 = document.getElementById("current--1");
+let activePlayer;
+
+const init = function () {
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+  currentScore0.textContent = 0;
+  currentScore1.textContent = 0;
+  activePlayer = 0;
+  diceEl.classList.add("hidden");
+
+  player0El.classList.add("player--active");
+  player1El.classList.remove("player--active");
+
+  for (let i = 0; i < 2; i++) {
+    document.querySelector(`.player--${i}`).classList.remove("player--winner");
+    document.querySelector(`.player--${i}`).classList.remove(".name");
+  }
+};
 
 //starting conditions
-score0El.textContent = 0;
-score1El.textContent = 0;
-diceEl.classList.add("hidden");
-let activePlayer = 0;
-
+init();
 const switchPlayer = function () {
   activePlayer == 0 ? activePlayer++ : activePlayer--;
   //instead off adding and removing classes, we will use toggle. toggle if selected class is not
@@ -70,24 +84,8 @@ const holdScore = function () {
 };
 
 const reset = function () {
-  score0El.textContent = 0;
-  score1El.textContent = 0;
-  currentScore0.textContent = 0;
-  currentScore1.textContent = 0;
+  init();
   diceEl.classList.add("hidden");
-
-  player0El.classList.add("player--active");
-  player1El.classList.remove("player--active");
-
-  for (let i = 0; i < 2; i++) {
-    document.querySelector(`.player--${i}`).classList.remove("player--winner");
-    document.querySelector(`.player--${i}`).classList.remove(".name");
-  }
-  // document.querySelector(".player--0").classList.remove("player--winner");
-  // document.querySelector(".player--0").classList.remove(".name");
-  // document.querySelector(".player--1").classList.remove("player--winner");
-  // document.querySelector(".player--1").classList.remove(".name");
-  activePlayer = 0;
   btnrollDice.classList.remove("hidden");
   btnHold.classList.remove("hidden");
   diceEl.classList.remove("hidden");
