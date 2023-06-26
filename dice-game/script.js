@@ -12,7 +12,7 @@ const player1El = document.querySelector(".player--1");
 let currentScore0 = document.getElementById("current--0");
 let currentScore1 = document.getElementById("current--1");
 let activePlayer;
-
+// const btnbot = document.querySelector(".btn--bot")
 const init = function () {
   score0El.textContent = 0;
   score1El.textContent = 0;
@@ -85,7 +85,6 @@ const holdScore = function () {
 
 const reset = function () {
   init();
-  diceEl.classList.add("hidden");
   btnrollDice.classList.remove("hidden");
   btnHold.classList.remove("hidden");
   diceEl.classList.remove("hidden");
